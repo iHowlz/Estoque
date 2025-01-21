@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Estoque</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="app">
+    <h1>Gerenciamento de Estoque de Equipamentos</h1>
+    <form id="equipmentForm">
+      <fieldset>
+        <legend>Informações do Equipamento</legend>
+        <label for="dataRecebimento">Data de Recebimento:</label>
+        <input type="date" id="dataRecebimento" required>
+
+        <label for="colaborador">Colaborador:</label>
+        <input type="text" id="colaborador" placeholder="Nome do colaborador" required>
+
+        <label for="empresa">Nome da Empresa:</label>
+        <input type="text" id="empresa" placeholder="Nome da empresa" required>
+
+        <label for="contato">Contato:</label>
+        <input type="text" id="contato" placeholder="Telefone ou e-mail" required>
+
+        <label for="equipamento">Tipo de Equipamento:</label>
+        <select id="equipamento" required>
+          <option value="Desktop">Desktop</option>
+          <option value="Notebook">Notebook</option>
+          <option value="Impressora">Impressora</option>
+        </select>
+
+        <label for="numeroSerie">Número de Série:</label>
+        <input type="text" id="numeroSerie" placeholder="Ex: ABC1234" required>
+
+        <label for="cargo">Cargo:</label>
+        <select id="cargo" required>
+          <option value="Comum">Comum</option>
+          <option value="Supervisor">Supervisor</option>
+          <option value="Gerente">Gerente</option>
+          <option value="Diretoria">Diretoria</option>
+        </select>
+
+        <label for="servico">Tipo de Serviço:</label>
+        <select id="servico" required>
+          <option value="Formatação">Formatação</option>
+          <option value="Clonagem">Clonagem</option>
+          <option value="Recuperação">Recuperação</option>
+          <option value="Upgrade RAM">Upgrade RAM</option>
+          <option value="Upgrade Disco">Upgrade Disco</option>
+          <option value="Hardware">Hardware interno</option>
+        </select>
+
+        <label for="descricaoProblema">Descrição do Problema:</label>
+        <textarea id="descricaoProblema" placeholder="Descrição detalhada do problema"></textarea>
+
+        <label for="statusServico">Serviço Concluído?</label>
+        <select id="statusServico">
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+        </select>
+
+        <label for="tecnicoResponsavel">Técnico Responsável:</label>
+        <input type="text" id="tecnicoResponsavel" placeholder="Nome do técnico" required>
+
+        <label for="dataEntrega">Data de Entrega:</label>
+        <input type="date" id="dataEntrega">
+
+        <button type="submit">Salvar Equipamento</button>
+      </fieldset>
+    </form>
+    <h2>Lista de Equipamentos</h2>
+    <div id="equipmentList"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
